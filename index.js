@@ -11,6 +11,8 @@ app.set('view engine', 'pug');
 //añadir la caprte de la vistas
 //el dirname es el directorio actual de la app y solo le agregamos la caprte views
 app.set('views', path.join(__dirname, './views'));
+//seteamos la carpeta publica para lso archivos estaticos
+app.use(express.static('public'));
 
 //aqui le decimos que use routes como el archivo de las rutas y los parentesis
 //son porque exporta una funcion
